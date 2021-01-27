@@ -10,14 +10,15 @@ You should not need to make any changes in this file.
 
 import sys
 
-from server import Server
+from server import Server # imports the server class
 
+# gets a port number from the command line
 try:
     port = int(sys.argv[1])
 except IndexError:
     print("Please include a port number, eg: python serve.py 50000")
     exit(-1)
 
-server = Server(port)
-server.serve()
+server = Server(port) # creates an instance of the Server class
+server.serve() # invokes that instances serve method
 
